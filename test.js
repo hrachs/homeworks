@@ -1,3 +1,4 @@
+
 // // hw 1
 
 // const library1 ={
@@ -76,5 +77,214 @@
 
 // //hw 4
 
+// const cloneDeep = require('lodash/cloneDeep');
+
+// const obj ={
+//     name: 'Hrach',
+//     surename: 'Sahakyan',
+// };
+
+// const copy = cloneDeep(obj);
+
+// copy.surename = 'Hakobyan';
+
+// console.log(obj);
+
+// console.log(copy);
+
+// // hw 5
+
+// function foo(arr) {
+//     let result = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         let flag = false; 
+//         for (let j = 0; j < result.length; j++) {
+//             if (arr[i] === result[j]) {
+//                 flag = true;
+//                 break; 
+//             }
+//         }
+//         if (!flag) {
+//             result.push(arr[i]); 
+//         }
+//     }
+//     return result;
+// }
+
+// const arr=[1,2,3,4,4,3,1];
+
+// const result=foo(arr);
+// console.log(arr);
+
+// console.log('result-> ', result);
+
+// hw 6
+// const prompt = require('prompt-sync')();
+
+// function foo(arr, size){
+//     let result = [];
+//     for (let i = 0;  i < arr.length; i+=size) {
+//         let x = arr.slice(i, i + size); // արգումենտ 1 start արգումենտ 2 stop
+//         result.push(x);
+//     }
+//     return result;
+
+// }
+
+// let arr = ['a','b','c','d','e'];
+// let size =Number( prompt("Enter the size of the array: "));
+// let result = foo(arr, size);
+// console.log(result);
+
+// // hw 7
+
+// let arr = [1, [2, [3, [4]], 5]];
 
 
+// let flat = arr.flat(Infinity); // անվերջ խորությամբ բացում ենք զանգվածը միչև զրոյական վիճակ
+// console.log(flat);
+
+// // hw 8
+// const arr =[[1,2], ['a','b'], [true,false]];
+// let arr2 = [];
+
+// function foo(arr, arr2){
+
+
+// }
+
+
+// // // hw 9 
+// console.log(x);
+
+// var x = 10; //var ով հայտարարված փոփոխականները hoist են լինում և դրա հաշվին տեսնում ենք undefined
+
+// console.log(x);
+
+// // hw 10
+// //console.log(x);
+// function demo(){
+//     console.log(x);// undefinde նույն պատճարով ինչ նախորդ խնդիրը ուղակի այս անգամ այն տեղի է ունենում ֆունկցիայի սկոպերի ներսում
+//     var x = 10;
+//     console.log(x);
+// }
+
+// //console.log(x);
+// demo();
+// // console.log(x);
+
+
+// //hw 11
+
+// if(true){
+//    console.log(y);
+//     var y = 10; 
+//     console.log(y)
+
+// }
+// console.log(y);
+
+// // hw12
+
+// foo();
+
+// bar();
+
+// function foo(){
+//     console.log("function foo");
+// }
+
+// const bar = function(){
+//     console.log("function bar");
+// }
+
+// //hw 13
+
+// baz();
+
+// let baz = () => {
+//     console.log("function baz");
+// }
+
+// //hw 14
+// let a = 10;
+// let b = 20;
+
+
+// add1(a, b);
+// add2(a, b);
+
+
+// var add1 = function(a, b){
+//     return a+b;
+// }
+
+// const add2 = function(a, b){
+//     return a+b;
+// }
+
+// // hw 15 
+
+// var a = 1;
+// let b = 2;
+// const c =3;
+// console.log(a, b, c);
+// function foo(){
+//     var a = 10;
+//     let b = 20;
+//     const c =30;
+//     console.log(a, b , c);
+// }
+// console.log(a, b, c);
+
+
+// foo()
+// console.log(a, b , c);
+
+// // hw 16
+
+// function foo(){
+//     console.log("this is foo");
+// };
+
+// const foo2 = () => {
+//     console.log("this is arrow function");
+
+// };
+
+// foo();
+// foo2();
+
+// // hw 17
+
+// const functions = [declared, expression, arrow];
+
+// for (let i = 0; i < functions.length; i++){
+//     console.log(functions[i])
+// }
+
+// function declared(){
+//     return "declared"
+// }
+
+// const expression = function(){
+//     return "expression"
+// }
+
+// const arrow =()=>{
+//     return "arrow"
+// }
+
+// for (let i = 0; i < functions.length; i++){
+//     console.log(functions[i]);
+// }
+
+// //hw 18
+
+// (function(){
+//     var z;
+//     console.log(z);
+//     z = 10;
+// })();
+
+// console.log(z);
