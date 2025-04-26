@@ -33,26 +33,17 @@
 
 // // hw2
 
-// let arrid = ['u1', 'u2', 'u3'];
-
-// const users = {};
-
-// let len = arrid[arrid.length - 1];
+// let userIds = ['u1', 'u2', 'u3'];
 
 
-// for(let i = 0; arrid[i] <= len; i++){
-//     users[i] = {score: 0};
-// }
+// let users = {};
 
-
-// console.log(users);
-
-// users[1].score += 10;
-// console.log(users);
-
-// let newId = '4';
-
-// users[newId] = {score: 0};
+// userIds.forEach(id => {
+//   users[id] = { score: 0 };
+// });
+// users['u2'].score += 10;
+// let newId = 'u4';
+// users[newId] = { score: 0 };
 // console.log(users);
 
 // // hw3
@@ -77,46 +68,40 @@
 
 // //hw 4
 
-// const cloneDeep = require('lodash/cloneDeep');
+// const userDetails = {
+//     name: "John Doe",
+//     age: 14,
+//     verified: false
+//   };
 
-// const obj ={
-//     name: 'Hrach',
-//     surename: 'Sahakyan',
-// };
+// function copy(obj){
+//     let newobj = {...obj};
+//     return newobj;
+// }
 
-// const copy = cloneDeep(obj);
+// let x = copy(userDetails);
 
-// copy.surename = 'Hakobyan';
+// x.age= 22;
 
-// console.log(obj);
-
-// console.log(copy);
+// console.log(x);
+// console.log(userDetails);
 
 // // hw 5
 
-// function foo(arr) {
-//     let result = [];
-//     for (let i = 0; i < arr.length; i++) {
-//         let flag = false; 
-//         for (let j = 0; j < result.length; j++) {
-//             if (arr[i] === result[j]) {
-//                 flag = true;
-//                 break; 
-//             }
-//         }
-//         if (!flag) {
-//             result.push(arr[i]); 
+// let arr=[1,1,1,3,2,5,6,7,6];
+
+// function foo(arr){
+//     let x = [];
+//     for(let i = 0; i < arr.length; i++){
+//         if(x.indexOf(arr[i]) === -1){
+//             x.push(arr[i]);
 //         }
 //     }
-//     return result;
+// return x;
 // }
 
-// const arr=[1,2,3,4,4,3,1];
 
-// const result=foo(arr);
-// console.log(arr);
-
-// console.log('result-> ', result);
+// console.log(foo(arr));
 
 // hw 6
 // const prompt = require('prompt-sync')();
@@ -164,7 +149,7 @@
 // // hw 10
 // //console.log(x);
 // function demo(){
-//     console.log(x);// undefinde նույն պատճարով ինչ նախորդ խնդիրը ուղակի այս անգամ այն տեղի է ունենում ֆունկցիայի սկոպերի ներսում
+//     console.log(x);// undefined նույն պատճարով ինչ նախորդ խնդիրը ուղակի այս անգամ այն տեղի է ունենում ֆունկցիայի սկոպերի ներսում
 //     var x = 10;
 //     console.log(x);
 // }
@@ -182,7 +167,7 @@
 //     console.log(y)
 
 // }
-// console.log(y);
+// console.log(y); // hoistից հետո գլոբալ տարածքում արդեն փոփոխականին արժեքավորել ենք դրա համար էլ վեջում տեսնում ենք
 
 // // hw12
 
@@ -191,11 +176,11 @@
 // bar();
 
 // function foo(){
-//     console.log("function foo");
+//     console.log("function foo"); // ֆունկցիայի կանչի ժանամանակ համապատասխանաբար տեղադրվում են դրանց բոդիները այդ պատճառով ամեն ինչ նորմալ աշխատում է 
 // }
 
 // const bar = function(){
-//     console.log("function bar");
+//     console.log("function bar"); // մինչև այս տողին հասնելը այն անհասանելի է բոլոր տեղերում դրա համար ստանում ենք error
 // }
 
 // //hw 13
@@ -203,7 +188,7 @@
 // baz();
 
 // let baz = () => {
-//     console.log("function baz");
+//     console.log("function baz"); // հայտարարությունը ելի hoist է լինում ուղղակիոեն ընկնում է TDZ և չի կատարվում
 // }
 
 // //hw 14
@@ -228,56 +213,56 @@
 // var a = 1;
 // let b = 2;
 // const c =3;
-// console.log(a, b, c);
+// console.log(a, b, c); // երևալու է 1 2 3 պայմանավորված սկզբնական արժեքներով 
 // function foo(){
 //     var a = 10;
 //     let b = 20;
-//     const c =30;
-//     console.log(a, b , c);
+//     const c = 30;
+//     console.log(a, b , c); 
 // }
-// console.log(a, b, c);
+// console.log(a, b, c); // նորից սկզբնական արժեքները
 
 
-// foo()
-// console.log(a, b , c);
+// foo()// գտնում է ֆուկցիայի լոկալ տիրույթի փոփոխականները տպում է դրանք 10 20 30
+
+// console.log(a, b , c);// նորից սկզբնական արժեքները
+
 
 // // hw 16
 
 // function foo(){
-//     console.log("this is foo");
+//     console.log(this); // this ը երևում է այս դեպքում և ցուցադրում է գլոբալ thisը
 // };
 
 // const foo2 = () => {
-//     console.log("this is arrow function");
-
+//     console.log(this);  
 // };
 
 // foo();
 // foo2();
 
-// // hw 17
+// hw 17
+
+// function declared() {
+//     return "declared";
+// }
+
+// const expression = function() {
+//     return "expression";
+// }
+
+// const arrow = () => {
+//     return "arrow";
+// }
+
 
 // const functions = [declared, expression, arrow];
 
-// for (let i = 0; i < functions.length; i++){
-//     console.log(functions[i])
-// }
-
-// function declared(){
-//     return "declared"
-// }
-
-// const expression = function(){
-//     return "expression"
-// }
-
-// const arrow =()=>{
-//     return "arrow"
-// }
-
-// for (let i = 0; i < functions.length; i++){
+// for (let i = 0; i < functions.length; i++) { 
 //     console.log(functions[i]);
 // }
+
+
 
 // //hw 18
 
@@ -287,4 +272,4 @@
 //     z = 10;
 // })();
 
-// console.log(z);
+// console.log(z);// հայտարարվում է ֆուկցիայի մեջ չի երևում գլոբալ տիրույթում քանզի այն հենց կանչի պահին ստեղծում և վերանում է
