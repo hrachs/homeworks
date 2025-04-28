@@ -51,5 +51,20 @@
 // person.showThis();
 // person.showThis;
 
+
+
 // hw 4
 
+// function Animal(type, name){
+//     this.type =type,
+//     this.name = name,
+//     this.describe = function () {
+//         return This is a ${type} named ${this.name};
+//     }
+// }
+
+// let obj1 = new Animal('vayri', 'vagr');
+// let obj2 = new Animal('yntani', 'gar');
+
+// console.log(obj1.describe());
+// console.log(obj2.describe());
