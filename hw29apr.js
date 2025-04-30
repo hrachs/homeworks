@@ -70,3 +70,21 @@
 
 //  hw 7
 
+// const obj= {
+//     a: 10,
+//     b: 20,
+//     foo: function(){
+//         return this.a + this.b;
+//     }
+// }
+
+// console.log(obj.foo());
+
+// const obj2= {
+//     a: 10,
+//     b: 20,
+//     foo: ()=>{
+//         return this.a + this.b;
+//     }
+// }
+// console.log(obj2.foo());
