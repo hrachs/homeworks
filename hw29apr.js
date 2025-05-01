@@ -31,6 +31,10 @@
 // console.log(obj.myf()); // undefined + undefined == NaN
 
 //hw 3
+// const arr1 = [1, 2, 3, 4];
+
+// const arr2 = arr1.map((x)=> x * 2);
+// console.log(arr2);
 
 
 // hw 4
@@ -88,3 +92,51 @@
 //     }
 // }
 // console.log(obj2.foo());
+
+// hw 8
+
+// function foo (x){return x * 2};
+
+// function mymap(arr, foo){
+//     const result = [];
+//     for(let i = 0; i < arr.length; i++){
+//         result.push(foo(arr[i]));
+//     }
+//     return result;
+// }
+
+// const arr = [1,2,3,4,5];
+// const res = mymap(arr, foo);
+// console.log(res);
+
+
+// hw 9 
+// function myfilter(arr, foo){
+//     const result=[]
+//     for(let i = 0; i < arr.length; i++){
+//        if(foo(arr[i])){
+//         result.push(arr[i]);
+//        }
+//     }
+//     return result;
+// }
+
+
+
+// const arr = [1,2,3,4,5,6,7,8,9,];
+
+// const result=myfilter(arr, (value)=> value % 2 === 0);
+
+// console.log(result);
+
+// // hw 10
+// function myforEach(arr, foo){
+//     for(let i = 0; i < arr.length; i++){
+//         foo(arr[i]);
+//     }
+// }
+
+// const arr = [1,2,3,4,5,6,7,8,9,];
+
+// myforEach(arr, console.log);
+
