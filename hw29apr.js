@@ -28,7 +28,7 @@
 // }
 
 // console.log(obj.foo());
-// console.log(obj.myf());c // undefined + undefined == NaN
+// console.log(obj.myf()); // undefined + undefined == NaN
 
 //hw 3
 
