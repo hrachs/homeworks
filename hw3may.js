@@ -37,11 +37,14 @@
 // })
 
 // hw 4
-// function simulateDownlaod(filename, callback){
+// function simulateDownload(filename, callback){
 //     setTimeout(function (){
 //         callback("download complere: " + filename);
 //     },2000);
 // };
 
-// simulateDownlaod("file.txt", text =>{console.log(text)});
+// simulateDownload("file1.txt", function (message) {
+//   console.log(message);
+// });
+
 
