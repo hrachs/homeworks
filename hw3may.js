@@ -88,5 +88,22 @@
 // .then(data => pip.filterData(data))
 // .then(filter => pip.logData(filter))
 
+// hw 8
+// class FileUploader{
+//     constructor(filename){
+//         this.filename = filename;
+//     }
+//     notifyUser(){
+//         console.log(`end download`);
+//     }
+//     startUpload(){
+//         console.log("download.....");
+//         setTimeout(()=>{console.log(`${this.filename} is uploading `); this.notifyUser();}, 2000);
+//     }
+    
+// }
+
+// const foo = new FileUploader('exemple.txt');
+// foo.startUpload();
 
   
