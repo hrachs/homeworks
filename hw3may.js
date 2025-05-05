@@ -48,3 +48,45 @@
 // });
 
 
+// hw 6 
+
+// class UserFtcher{
+//     constructor(baseUrl){
+//         this.baseUrl = baseUrl;
+//     }
+//     async getUser(userId){
+//         const response = await fetch(`${this.baseUrl}/users/${userId}`);
+//         const Json = await response.json();
+//         return Json;
+//     }
+//     async printUserName(userId){
+//         const user = await this.getUser(userId);
+//         console.log(user.name);
+//     }
+// }
+
+// const fu = new UserFtcher(`https://jsonplaceholder.typicode.com`);
+// fu.printUserName(1);
+ 
+//hw 7
+// class DataPipeline{
+   
+//     fetchData(baseUrl){
+//      return fetch(baseUrl)
+//             .then(resp=> resp.json());
+//     }
+//     filterData(data){
+//       return data.filter(res => res.userId <= 5);
+//     }
+//     logData(data){
+//         console.log(data);
+//     }
+// }
+// const pip = new DataPipeline();
+// pip
+// .fetchData('https://jsonplaceholder.typicode.com/posts')  
+// .then(data => pip.filterData(data))
+// .then(filter => pip.logData(filter))
+
+
+  
