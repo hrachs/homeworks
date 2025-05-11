@@ -1,4 +1,4 @@
-// //Tasks for fs Module
+//Tasks for fs Module
 
 // hw1
 //const fs  = require('fs');
@@ -65,6 +65,15 @@
 
 // console.log("sync:  ", data);  // //ըստ event loop  ի կատարման հերթականության առաջնահերթ կատավում են sync գործողությունները
 
+
+
+
+
+
+
+
+
+
 // //Tasks for path Module
 // hw 1
 // const path = require('path');
@@ -117,6 +126,14 @@
 // const x = path.dirname(absolute);
 // console.log(x);
 
+
+
+
+
+
+
+
+
 //Tasks for events Module
 
 // hw 1
@@ -130,6 +147,15 @@
 // });
 
 // emmiter.emit(greeting);
+
+
+
+
+
+
+
+
+
 
 
 //Tasks for http Module
@@ -184,5 +210,46 @@
 //         res.end();
 //     }
 // }).listen(8080, ()=>{console.log("server listen port 8080")});
+
+//hw 4 
+
+// const http = require('http');
+// const fs = require('fs');
+
+// http.createServer((req, res) =>{
+//     if(req.url === '/home'){
+//         const file = fs.readFileSync('./index.html', 'utf-8');
+//         res.end(file);
+//     }else{
+//         res.end("404");
+//     }
+// }).listen(8080, ()=>{console.log('Server listen 8080')});
+
+
+// hw 5
+
+// const http = require('http');
+// const fs = require('fs');
+// const path = require('path');
+
+// http.createServer((req, res) => {
+//     let route = req.url === '/' ? '/index.html' : req.url;
+//     const filepath = path.join(__dirname, route);
+
+//     if (fs.existsSync(filepath) && fs.statSync(filepath).isFile()) {
+//         let file = fs.readFileSync(filepath, 'utf-8');
+//         res.writeHead(200, { 'Content-Type': 'text/html' });
+//         res.end(file);
+//     } else {
+//         const errorfile = fs.readFileSync('./404.html', 'utf-8');
+//         res.writeHead(404, { 'Content-Type': 'text/html' });
+//         res.end(errorfile);
+//     }
+
+// }).listen(8080, () => {
+//     console.log("server listen 8080");
+// });
+
+
 
 

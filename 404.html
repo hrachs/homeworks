@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Էջը չի գտնվել</title>
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --error: #d63031;
+            --light: #f8f9fa;
+            --dark: #343a40;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .error-container {
+            max-width: 600px;
+            padding: 2rem;
+        }
+        
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: var(--error);
+            margin: 0;
+            line-height: 1;
+        }
+        
+        .error-title {
+            font-size: 2rem;
+            margin: 1rem 0;
+            color: var(--dark);
+        }
+        
+        .error-message {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .home-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .home-link:hover {
+            background-color: #5649c0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="animation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="none" viewBox="0 0 24 24" stroke="#d63031">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        </div>
+        
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Օ՜՜՜՜՜ՔՍ... ԷՋԸ ՉԻ ԳՏՆՎԵԼ</h2>
+        <p class="error-message">
+            Կարծես թե կորել եք... Մեր նավաստին չի կարողացել գտնել այս էջը։<br>
+            Խնդրում ենք ստուգել հասցեն կամ վերադառնալ գլխավոր էջ։
+        </p>
+        <a href="/" class="home-link">ՎԵՐԱԴԱՌՆԱԼ ԳԼԽԱՎՈՐ ԷՋ</a>
+    </div>
+</body>
+</html>
