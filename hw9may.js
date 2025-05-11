@@ -164,6 +164,25 @@
 
 // hw 3
 
-const http = require('http');
+// const http = require('http');
 
-http.
+// http.createServer((req, res)=>{
+//     if(req.method === 'POST' && req.url === '/submit'){
+//         let body;
+
+//         req.on('data', chunk=>{
+//             body += chunk.toString();
+//         });
+
+//         req.on('end', ()=>{
+//             console.log(body.toString());
+//             res.end("ok");
+//         });
+        
+//     }else{
+//         res.write('Error');
+//         res.end();
+//     }
+// }).listen(8080, ()=>{console.log("server listen port 8080")});
+
+
