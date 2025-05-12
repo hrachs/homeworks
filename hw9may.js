@@ -148,10 +148,59 @@
 
 // emmiter.emit(greeting);
 
+//hw 2
+
+// const EventEmitter = require('events');
+
+// const emmiter = new EventEmitter;
+
+// emmiter.on('greeting', ()=>{
+//     console.log('hello');
+// })
+
+// emmiter.on('greeting1', ()=>{
+//     console.log('world');
+// })
+
+// emmiter.emit('greeting');
+// emmiter.emit('greeting1');
+
+// hw3 
+
+// const EventEmitter =require('events');
+
+// const emmiter = new EventEmitter;
+
+// emmiter.on('message', ()=>{
+//     console.log('message');
+
+// });
+
+// // //emmiter.removeListener('message');
+
+// emmiter.emit('message');
+
+
+// hw 4
+
+// const EventEmitter = require('events');
+// const emmiter = new EventEmitter;
+// emmiter.once('message', ()=>{console.log('hello')});
+
+// emmiter.emit('message');
+// emmiter.emit('message');
 
 
 
 
+
+// hw 5
+// const EventEmitter = require('events');
+// const emmiter = new EventEmitter;
+
+// emmiter.on('error', (err)=>{console.log('message', err.message)});
+
+// emmiter.emit('error', new Error('error'));
 
 
 
@@ -197,7 +246,7 @@
 //         let body;
 
 //         req.on('data', chunk=>{
-//             body += chunk.toString();
+//             body += chunk.toString();  //curl -X POST http://localhost:8080/submit -d "message=HelloWorld"
 //         });
 
 //         req.on('end', ()=>{
@@ -238,11 +287,12 @@
 
 //     if (fs.existsSync(filepath) && fs.statSync(filepath).isFile()) {
 //         let file = fs.readFileSync(filepath, 'utf-8');
-//         res.writeHead(200, { 'Content-Type': 'text/html' });
+        
+
 //         res.end(file);
 //     } else {
 //         const errorfile = fs.readFileSync('./404.html', 'utf-8');
-//         res.writeHead(404, { 'Content-Type': 'text/html' });
+
 //         res.end(errorfile);
 //     }
 
