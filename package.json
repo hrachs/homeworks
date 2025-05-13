@@ -5,7 +5,8 @@
   "main": "hw13may.js",
   "scripts": {
     "test": "echo \"Hello Packets!\"",
-    "start": "node hw13may.js"
+    "start0": "node hw13may.js",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
